@@ -1,0 +1,7 @@
+{
+  "ignore": ["/upload", "/node_modules"],
+  "watch": ["src", "package.json"],
+  "ext": "ts, js",
+  "exec": "swc src -d dist && esbuild ./dist/app.js --bundle --platform=node --packages=external --outfile=./dist/out.js && node ./dist/out.js",
+  "delay": "300"
+}
